@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#faf6f1" />
+  <meta name="description" content="Isak Rathe Støre — Platform Engineer at Vipps MobilePay. Building data platforms, shipping products, winning hackathons." />
+  <title>Isak Rathe Støre</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --vipps:       #ff5b24;
+      --vipps-dark:  #d94518;
+      --vipps-light: #fff4ec;
+      --bg:          #faf6f1;
+      --card:        #ffffff;
+      --ink:         #15161a;
+      --muted:       #6b6b73;
+      --rule:        #ececef;
+      --shadow:      0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(20,14,8,.07);
+      --shadow-lg:   0 2px 4px rgba(0,0,0,.04), 0 16px 40px rgba(20,14,8,.10);
+      --radius-card: 22px;
+      --radius-md:   14px;
+      --radius-sm:   10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.4;
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: calc(12px + env(safe-area-inset-top, 0px)) 20px 12px;
+      background: linear-gradient(180deg, rgba(250,246,241,.97) 0%, rgba(250,246,241,.92) 100%);
+      backdrop-filter: saturate(140%) blur(8px);
+      -webkit-backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .topbar-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .topbar-name {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .topbar-name span { color: var(--vipps); }
+
+    .topbar-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .topbar-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .topbar-links a:hover { color: var(--vipps); }
+
+    /* ── Page layout ── */
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 64px 0 52px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 52px;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--vipps);
+      margin-bottom: 18px;
+    }
+
+    .hero-name {
+      font-size: clamp(2.8rem, 10vw, 5.2rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 0.92;
+      margin-bottom: 24px;
+    }
+
+    .hero-name .last { color: var(--vipps); }
+
+    .hero-bio {
+      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+    }
+
+    .chip:hover { border-color: var(--vipps); color: var(--vipps); }
+
+    .chip .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--vipps);
+      flex-shrink: 0;
+    }
+
+    /* ── Section header ── */
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+
+    section { margin-bottom: 64px; }
+
+    /* ── Stats ── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 52px;
+    }
+
+    .stat {
+      background: var(--card);
+      padding: 28px 16px;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--vipps);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 16px;
+    }
+
+    .tl-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 2px solid var(--vipps);
+      flex-shrink: 0;
+      margin-top: 18px;
+      box-shadow: 0 0 0 3px var(--vipps-light);
+      position: relative;
+      z-index: 1;
+    }
+
+    .tl-dot.dim {
+      border-color: var(--rule);
+      box-shadow: none;
+    }
+
+    .tl-line {
+      width: 2px;
+      flex: 1;
+      min-height: 12px;
+      background: var(--rule);
+      margin: 4px 0;
+    }
+
+    .tl-body {
+      padding: 12px 0 32px;
+    }
+
+    .tl-period {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--vipps);
+      margin-bottom: 4px;
+    }
+
+    .tl-period.dim { color: var(--muted); }
+
+    .tl-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 2px;
+      letter-spacing: -0.01em;
+    }
+
+    .tl-org {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .tl-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .tl-badge {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 3px 10px;
+      background: var(--vipps-light);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--vipps);
+    }
+
+    /* ── Skills grid ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--vipps);
+      box-shadow: 0 4px 24px rgba(255,91,36,.12);
+      transform: translateY(-2px);
+    }
+
+    .skill-icon { font-size: 20px; margin-bottom: 10px; }
+
+    .skill-name {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    .skill-tags {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Links section ── */
+    .link-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--ink);
+      box-shadow: var(--shadow);
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .link-card:hover {
+      border-color: var(--vipps);
+      box-shadow: 0 4px 20px rgba(255,91,36,.12);
+    }
+
+    .link-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .link-label {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .link-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .link-arrow {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 16px;
+      transition: transform .2s, color .2s;
+    }
+
+    .link-card:hover .link-arrow {
+      color: var(--vipps);
+      transform: translateX(3px);
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      text-align: center;
+      padding: 32px 0 16px;
+      color: var(--muted);
+      font-size: 12px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .site-footer a { color: var(--vipps); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .stats { grid-template-columns: 1fr; }
+      .link-row { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .topbar-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-name">isak<span>rs</span>.com</div>
+    <nav class="topbar-links">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="hero-eyebrow">Oslo, Norway · Open to new opportunities</p>
+    <h1 class="hero-name">
+      Isak<br>
+      Rathe <span class="last">Støre</span>
+    </h1>
+    <p class="hero-bio">
+      Platform engineer with a strong product mindset. I build data infrastructure, ship things that matter, and occasionally win hackathons. 6+ years across Vipps MobilePay, Yara, and startups.
+    </p>
+    <div class="hero-chips">
+      <span class="chip"><span class="dot"></span>Vipps MobilePay</span>
+      <span class="chip"><span class="dot"></span>Hackathon Winner 2025</span>
+      <span class="chip"><span class="dot"></span>$3–4M commercial impact</span>
+      <a class="chip" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-val">6+</div>
+      <div class="stat-label">Years experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">$4M</div>
+      <div class="stat-label">Commercial impact</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val">8</div>
+      <div class="stat-label">Production ML solutions</div>
+    </div>
+  </div>
+
+  <!-- Work -->
+  <section id="work">
+    <p class="section-label">Experience</p>
+    <h2 class="section-title">Where I've worked</h2>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-col">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-period">Mar 2025 – Present</div>
+          <div class="tl-title">Platform &amp; Backend Engineer</div>
+          <div class="tl-org">Vipps MobilePay · Oslo</div>
+          <div class="tl-desc">Own and evolve the Azure Databricks platform used across product and analytics teams. Built Spark services to move data between Databricks and downstream SQL estates. Designed the platform architecture loop: ingest → central platform → curated outputs back to product teams. Set up CI/CD with GitHub Actions for safe, fast releases.</div>
+          <span class="tl-badge">🏆 Hackathon Winner 2025 — "Buy When Available"</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-col">
+          <div class="tl-dot dim"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-period dim">2024 · 3 months</div>
+          <div class="tl-title">Founder in Residence</div>
+          <div class="tl-org">Antler · Oslo</div>
+          <div class="tl-desc">Identified and validated new product opportunities through user research, technical experiments, and market analysis.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-col">
+          <div class="tl-dot dim"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-period dim">2019 – Feb 2025</div>
+          <div class="tl-title">Data Scientist &amp; Software Engineer</div>
+          <div class="tl-org">Yara International ASA · Oslo</div>
+          <div class="tl-desc">Led product strategy for 8 production ML solutions featured by AWS. Delivered $3–4M annual savings via optimization and predictive analytics. Built React frontends and backend-for-frontend endpoints. Årets kampanje 2023 at FINN jobb Awards (Schibsted).</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-col">
+          <div class="tl-dot dim"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-period dim">2019 · Summer</div>
+          <div class="tl-title">Software Developer</div>
+          <div class="tl-org">Oda Norway · Oslo</div>
+          <div class="tl-desc">Built a warehouse simulation and optimization engine — reduced simulated picking time by 14.9%.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-col">
+          <div class="tl-dot dim"></div>
+          <div class="tl-line"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-period dim">2018 · Winter</div>
+          <div class="tl-title">Data Scientist</div>
+          <div class="tl-org">Cognite · Oslo</div>
+          <div class="tl-desc">Built anomaly detection for industrial time series using unsupervised learning, Dockerized for production.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-col">
+          <div class="tl-dot dim"></div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-period dim">2017 · Summer</div>
+          <div class="tl-title">Software Developer</div>
+          <div class="tl-org">Blank · Oslo</div>
+          <div class="tl-desc">Implemented the first search engine for folq.no — NLP, Elasticsearch, and Word2Vec-based vector search.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <p class="section-label">Skills</p>
+    <h2 class="section-title">What I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🏗️</div>
+        <div class="skill-name">Platform &amp; Data</div>
+        <div class="skill-tags">Azure Databricks, Spark, SQL, ADF, event-driven design</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">☁️</div>
+        <div class="skill-name">Cloud &amp; Infrastructure</div>
+        <div class="skill-tags">Azure, AWS, Terraform, CloudFormation, GitHub Actions, CI/CD</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <div class="skill-name">Machine Learning</div>
+        <div class="skill-tags">Python 7+ yrs, regression, classification, anomaly detection, A/B testing</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🖥️</div>
+        <div class="skill-name">Frontend &amp; APIs</div>
+        <div class="skill-tags">React, TypeScript, backend-for-frontend, Bit component systems, API-first</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">📦</div>
+        <div class="skill-name">Product</div>
+        <div class="skill-tags">Strategy, backlog prioritization, user research, experimentation, commercial focus</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🎓</div>
+        <div class="skill-name">Education</div>
+        <div class="skill-tags">MSc Industrial Economics — NTNU. Exchanges: TUM, IIT Bombay, Mannheim, Boston University</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links -->
+  <section id="contact">
+    <p class="section-label">Find me</p>
+    <h2 class="section-title">Get in touch</h2>
+    <div class="link-row">
+      <a class="link-card" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener">
+        <div class="link-icon">💼</div>
+        <div>
+          <div class="link-label">LinkedIn</div>
+          <div class="link-sub">isakrathestoere</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+      <a class="link-card" href="https://github.com/isakrs" target="_blank" rel="noopener">
+        <div class="link-icon">🐙</div>
+        <div>
+          <div class="link-label">GitHub</div>
+          <div class="link-sub">github.com/isakrs</div>
+        </div>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Built with Claude Code · <a href="https://github.com/isakrs/isakrs">github.com/isakrs/isakrs</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
