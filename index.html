@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#faf6f1" />
-  <meta name="description" content="Isak Rathe Støre — Platform Engineer at Vipps MobilePay. Building data platforms, shipping products, winning hackathons." />
+  <meta name="theme-color" content="#f7f5f1" />
+  <meta name="description" content="Isak Rathe Støre - Platform Engineer at Vipps MobilePay. Building data platforms, shipping products, and turning ambiguous problems into working systems." />
   <title>Isak Rathe Støre</title>
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -14,10 +14,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --vipps:       #ff5b24;
-      --vipps-dark:  #d94518;
-      --vipps-light: #fff4ec;
-      --bg:          #faf6f1;
+      --vipps:       #1f6f8b;
+      --vipps-dark:  #14566e;
+      --vipps-light: #e8f3f6;
+      --bg:          #f7f5f1;
       --card:        #ffffff;
       --ink:         #15161a;
       --muted:       #6b6b73;
@@ -47,7 +47,7 @@
       top: 0;
       z-index: 10;
       padding: calc(12px + env(safe-area-inset-top, 0px)) 20px 12px;
-      background: linear-gradient(180deg, rgba(250,246,241,.97) 0%, rgba(250,246,241,.92) 100%);
+      background: linear-gradient(180deg, rgba(247,245,241,.97) 0%, rgba(247,245,241,.92) 100%);
       backdrop-filter: saturate(140%) blur(8px);
       -webkit-backdrop-filter: saturate(140%) blur(8px);
       border-bottom: 1px solid var(--rule);
@@ -99,6 +99,13 @@
       margin-bottom: 52px;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 168px;
+      gap: 32px;
+      align-items: end;
+    }
+
     .hero-eyebrow {
       font-size: 11px;
       font-weight: 600;
@@ -130,6 +137,94 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+    }
+
+    .profile-photo-wrap {
+      position: relative;
+      justify-self: end;
+      width: 168px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      outline: none;
+      isolation: isolate;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--vipps);
+      background: var(--vipps-light);
+      box-shadow: var(--shadow-lg);
+      display: block;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+    }
+
+    .profile-photo-wrap:hover .profile-photo,
+    .profile-photo-wrap:focus-visible .profile-photo {
+      transform: translateY(-2px);
+      border-color: var(--vipps-dark);
+      box-shadow: 0 2px 4px rgba(0,0,0,.05), 0 20px 50px rgba(31,111,139,.18);
+    }
+
+    .profile-peek {
+      position: absolute;
+      right: calc(100% + 14px);
+      top: 50%;
+      width: 252px;
+      height: 214px;
+      opacity: 0;
+      transform: translate(14px, -50%) scale(.96);
+      transition: opacity .18s ease, transform .22s ease;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    .profile-photo-wrap:hover .profile-peek,
+    .profile-photo-wrap:focus-visible .profile-peek {
+      opacity: 1;
+      transform: translate(0, -50%) scale(1);
+    }
+
+    .peek-photo {
+      position: absolute;
+      width: 86px;
+      height: 112px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: var(--card);
+      border: 3px solid var(--card);
+      box-shadow: 0 10px 24px rgba(21,22,26,.16);
+    }
+
+    .peek-photo.wide {
+      width: 132px;
+      height: 88px;
+    }
+
+    .peek-photo:nth-child(1) {
+      left: 10px;
+      top: 34px;
+      transform: rotate(-8deg);
+    }
+
+    .peek-photo:nth-child(2) {
+      left: 86px;
+      top: 0;
+      transform: rotate(5deg);
+    }
+
+    .peek-photo:nth-child(3) {
+      left: 112px;
+      top: 96px;
+      transform: rotate(-4deg);
+    }
+
+    .peek-photo:nth-child(4) {
+      left: 40px;
+      top: 112px;
+      transform: rotate(7deg);
     }
 
     .chip {
@@ -286,10 +381,54 @@
       margin-bottom: 8px;
     }
 
+    .tl-org a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .tl-org a:hover {
+      color: var(--vipps);
+      text-decoration: underline;
+    }
+
     .tl-desc {
       font-size: 13px;
       color: var(--muted);
       line-height: 1.6;
+    }
+
+    .tl-desc a {
+      color: var(--vipps);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .tl-desc a:hover { text-decoration: underline; }
+
+    .proof-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .proof-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 9px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      background: var(--card);
+      color: var(--vipps);
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+
+    .proof-link:hover {
+      border-color: var(--vipps);
+      background: var(--vipps-light);
     }
 
     .tl-badge {
@@ -301,6 +440,52 @@
       font-size: 11px;
       font-weight: 700;
       color: var(--vipps);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .project-card {
+      display: block;
+      min-height: 128px;
+      padding: 18px;
+      background: var(--card);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-md);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      transition: border-color .2s, box-shadow .2s, transform .2s;
+    }
+
+    .project-card:hover {
+      border-color: var(--vipps);
+      box-shadow: 0 4px 24px rgba(31,111,139,.12);
+      transform: translateY(-2px);
+    }
+
+    .project-kicker {
+      color: var(--vipps);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-size: 15px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
     }
 
     /* ── Skills grid ── */
@@ -321,7 +506,7 @@
 
     .skill-card:hover {
       border-color: var(--vipps);
-      box-shadow: 0 4px 24px rgba(255,91,36,.12);
+      box-shadow: 0 4px 24px rgba(31,111,139,.12);
       transform: translateY(-2px);
     }
 
@@ -363,7 +548,7 @@
 
     .link-card:hover {
       border-color: var(--vipps);
-      box-shadow: 0 4px 20px rgba(255,91,36,.12);
+      box-shadow: 0 4px 20px rgba(31,111,139,.12);
     }
 
     .link-icon {
@@ -410,7 +595,27 @@
     @media (max-width: 520px) {
       .stats { grid-template-columns: 1fr; }
       .link-row { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .profile-photo-wrap { width: 132px; justify-self: start; }
+      .profile-peek {
+        left: 84px;
+        right: auto;
+        top: 50%;
+        width: 214px;
+        height: 184px;
+        transform: translate(-8px, -50%) scale(.96);
+      }
+      .profile-photo-wrap:hover .profile-peek,
+      .profile-photo-wrap:focus-visible .profile-peek {
+        transform: translate(0, -50%) scale(1);
+      }
+      .peek-photo { width: 72px; height: 94px; }
+      .peek-photo.wide { width: 112px; height: 74px; }
+      .peek-photo:nth-child(2) { left: 70px; }
+      .peek-photo:nth-child(3) { left: 92px; top: 84px; }
+      .peek-photo:nth-child(4) { left: 32px; top: 96px; }
       .topbar-links { display: none; }
     }
   </style>
@@ -423,6 +628,7 @@
     <div class="topbar-name">isak<span>rs</span>.com</div>
     <nav class="topbar-links">
       <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -433,26 +639,39 @@
 
   <!-- Hero -->
   <div class="hero">
-    <p class="hero-eyebrow">Oslo, Norway · Open to new opportunities</p>
-    <h1 class="hero-name">
-      Isak<br>
-      Rathe <span class="last">Støre</span>
-    </h1>
-    <p class="hero-bio">
-      Platform engineer with a strong product mindset. I build data infrastructure, ship things that matter, and occasionally win hackathons. 6+ years across Vipps MobilePay, Yara, and startups.
-    </p>
-    <div class="hero-chips">
-      <span class="chip"><span class="dot"></span>Vipps MobilePay</span>
-      <span class="chip"><span class="dot"></span>Hackathon Winner 2025</span>
-      <span class="chip"><span class="dot"></span>$3–4M commercial impact</span>
-      <a class="chip" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
+    <div class="hero-grid">
+      <div>
+        <p class="hero-eyebrow">Oslo, Norway · Open to opportunities</p>
+        <h1 class="hero-name">
+          Isak<br>
+          Rathe <span class="last">Støre</span>
+        </h1>
+        <p class="hero-bio">
+          Platform engineer with a strong product mindset. I build data infrastructure, ship things that matter, and turn ambiguous business problems into working systems. 7+ years across Vipps MobilePay, Yara, Oda, and startups.
+        </p>
+        <div class="hero-chips">
+          <span class="chip"><span class="dot"></span>Vipps MobilePay</span>
+          <span class="chip"><span class="dot"></span>Hackathon Winner 2025</span>
+          <span class="chip"><span class="dot"></span>$3-4M commercial impact</span>
+          <a class="chip" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
+        </div>
+      </div>
+      <div class="profile-photo-wrap" tabindex="0" aria-label="Portrait of Isak Rathe Støre">
+        <img class="profile-photo" src="assets/isak-profile.jpg" alt="">
+        <div class="profile-peek" aria-hidden="true">
+          <img class="peek-photo" src="assets/slideshow/life-02-finn-award.jpg" alt="">
+          <img class="peek-photo" src="assets/slideshow/life-08-presentation.jpg" alt="">
+          <img class="peek-photo wide" src="assets/slideshow/life-04-summit.jpg" alt="">
+          <img class="peek-photo" src="assets/slideshow/life-09-india.jpg" alt="">
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Stats -->
   <div class="stats">
     <div class="stat">
-      <div class="stat-val">6+</div>
+      <div class="stat-val">7+</div>
       <div class="stat-label">Years experience</div>
     </div>
     <div class="stat">
@@ -461,7 +680,7 @@
     </div>
     <div class="stat">
       <div class="stat-val">8</div>
-      <div class="stat-label">Production ML solutions</div>
+      <div class="stat-label">Production machine learning solutions</div>
     </div>
   </div>
 
@@ -478,11 +697,14 @@
           <div class="tl-line"></div>
         </div>
         <div class="tl-body">
-          <div class="tl-period">Mar 2025 – Present</div>
+          <div class="tl-period">March 2025 - Present</div>
           <div class="tl-title">Platform &amp; Backend Engineer</div>
-          <div class="tl-org">Vipps MobilePay · Oslo</div>
-          <div class="tl-desc">Own and evolve the Azure Databricks platform used across product and analytics teams. Built Spark services to move data between Databricks and downstream SQL estates. Designed the platform architecture loop: ingest → central platform → curated outputs back to product teams. Set up CI/CD with GitHub Actions for safe, fast releases.</div>
-          <span class="tl-badge">🏆 Hackathon Winner 2025 — "Buy When Available"</span>
+          <div class="tl-org"><a href="https://vippsmobilepay.com/" target="_blank" rel="noopener">Vipps MobilePay</a> · Oslo</div>
+          <div class="tl-desc">Own and evolve the Azure Databricks platform used across product and analytics teams. Built Apache Spark services to move data between Databricks and downstream SQL estates. Designed the platform architecture loop from ingest to central platform to curated outputs back to product teams. Set up continuous integration and continuous delivery with GitHub Actions for safe, fast releases.</div>
+          <div class="proof-links">
+            <a class="proof-link" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener">LinkedIn profile</a>
+          </div>
+          <a class="tl-badge" href="https://www.linkedin.com/feed/update/urn:li:activity:7432705801934237696/" target="_blank" rel="noopener" style="text-decoration:none;">🏆 Hackathon Winner 2025 — "Buy When Available"</a>
         </div>
       </div>
 
@@ -494,7 +716,7 @@
         <div class="tl-body">
           <div class="tl-period dim">2024 · 3 months</div>
           <div class="tl-title">Founder in Residence</div>
-          <div class="tl-org">Antler · Oslo</div>
+          <div class="tl-org"><a href="https://www.antler.co/locations" target="_blank" rel="noopener">Antler</a> · Oslo</div>
           <div class="tl-desc">Identified and validated new product opportunities through user research, technical experiments, and market analysis.</div>
         </div>
       </div>
@@ -505,10 +727,16 @@
           <div class="tl-line"></div>
         </div>
         <div class="tl-body">
-          <div class="tl-period dim">2019 – Feb 2025</div>
+          <div class="tl-period dim">2019 - February 2025</div>
           <div class="tl-title">Data Scientist &amp; Software Engineer</div>
-          <div class="tl-org">Yara International ASA · Oslo</div>
-          <div class="tl-desc">Led product strategy for 8 production ML solutions featured by AWS. Delivered $3–4M annual savings via optimization and predictive analytics. Built React frontends and backend-for-frontend endpoints. Årets kampanje 2023 at FINN jobb Awards (Schibsted).</div>
+          <div class="tl-org"><a href="https://www.yara.com/" target="_blank" rel="noopener">Yara International ASA</a> · Oslo</div>
+          <div class="tl-desc">Led product strategy for 8 production machine learning solutions featured by Amazon Web Services. Delivered $3-4M annual savings via optimization and predictive analytics. Built React frontends and backend-for-frontend endpoints. Årets kampanje 2023 at FINN jobb Awards (Schibsted).</div>
+          <div class="proof-links">
+            <a class="proof-link" href="https://aws.amazon.com/blogs/machine-learning/how-yara-is-using-mlops-features-of-amazon-sagemaker-to-scale-energy-optimization-across-their-ammonia-plants/" target="_blank" rel="noopener">Amazon Web Services article</a>
+            <a class="proof-link" href="https://www.finn.no/bedriftskunde/aktuelt/finn-jobb/the-hunt-2023" target="_blank" rel="noopener">FINN jobb Awards</a>
+            <a class="proof-link" href="https://www.aftenposten.no/brandstudio/feature/v/yara/forer-verden-fra-dataskjermen/" target="_blank" rel="noopener">Recruitment campaign</a>
+            <a class="proof-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7047538681594716160/" target="_blank" rel="noopener">LinkedIn post</a>
+          </div>
         </div>
       </div>
 
@@ -520,8 +748,12 @@
         <div class="tl-body">
           <div class="tl-period dim">2019 · Summer</div>
           <div class="tl-title">Software Developer</div>
-          <div class="tl-org">Oda Norway · Oslo</div>
-          <div class="tl-desc">Built a warehouse simulation and optimization engine — reduced simulated picking time by 14.9%.</div>
+          <div class="tl-org"><a href="https://oda.com/no/about/about-oda-group/" target="_blank" rel="noopener">Oda Norway</a> · Oslo</div>
+          <div class="tl-desc">Built a warehouse simulation and optimization engine - reduced simulated picking time by 14.9%.</div>
+          <div class="proof-links">
+            <a class="proof-link" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">Master thesis</a>
+            <a class="proof-link" href="https://drive.google.com/file/d/15ugsTqIl5AT9ZfF6gDCZiqHd0Gm5d0Qp/view?usp=sharing" target="_blank" rel="noopener">Paper</a>
+          </div>
         </div>
       </div>
 
@@ -533,7 +765,7 @@
         <div class="tl-body">
           <div class="tl-period dim">2018 · Winter</div>
           <div class="tl-title">Data Scientist</div>
-          <div class="tl-org">Cognite · Oslo</div>
+          <div class="tl-org"><a href="https://www.cognite.com/en" target="_blank" rel="noopener">Cognite</a> · Oslo</div>
           <div class="tl-desc">Built anomaly detection for industrial time series using unsupervised learning, Dockerized for production.</div>
         </div>
       </div>
@@ -545,11 +777,49 @@
         <div class="tl-body">
           <div class="tl-period dim">2017 · Summer</div>
           <div class="tl-title">Software Developer</div>
-          <div class="tl-org">Blank · Oslo</div>
-          <div class="tl-desc">Implemented the first search engine for folq.no — NLP, Elasticsearch, and Word2Vec-based vector search.</div>
+          <div class="tl-org"><a href="https://blank.no/" target="_blank" rel="noopener">Blank</a> · Oslo</div>
+          <div class="tl-desc">Implemented the first search engine for the <a href="https://www.folq.no" target="_blank" rel="noopener">folq.no</a> consulting marketplace using natural language processing, Word2Vec models, Elasticsearch, and optimization algorithms.</div>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <p class="section-label">Selected proof</p>
+    <h2 class="section-title">Projects worth opening</h2>
+    <div class="projects-grid">
+      <a class="project-card" href="https://aws.amazon.com/blogs/machine-learning/how-yara-is-using-mlops-features-of-amazon-sagemaker-to-scale-energy-optimization-across-their-ammonia-plants/" target="_blank" rel="noopener">
+        <div class="project-kicker">Yara</div>
+        <div class="project-title">Production machine learning at industrial scale</div>
+        <div class="project-desc">Amazon Web Services article on scaling energy optimization across ammonia plants.</div>
+      </a>
+      <a class="project-card" href="https://www.finn.no/bedriftskunde/aktuelt/finn-jobb/the-hunt-2023" target="_blank" rel="noopener">
+        <div class="project-kicker">Schibsted</div>
+        <div class="project-title">Award-winning recruitment campaign</div>
+        <div class="project-desc">Yara won Årets kampanje 2023 at FINN jobb Awards.</div>
+      </a>
+      <a class="project-card" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">
+        <div class="project-kicker">Oda</div>
+        <div class="project-title">Warehouse simulation and optimization</div>
+        <div class="project-desc">Master thesis behind the picking-time simulation and optimization work.</div>
+      </a>
+      <a class="project-card" href="https://www.revolve.no/cars" target="_blank" rel="noopener">
+        <div class="project-kicker">Revolve NTNU</div>
+        <div class="project-title">KOG Arctos R electric race car</div>
+        <div class="project-desc">Norway's first electric race car, built by the Revolve NTNU Formula Student team.</div>
+      </a>
+      <a class="project-card" href="https://admetsys.com/" target="_blank" rel="noopener">
+        <div class="project-kicker">Admetsys</div>
+        <div class="project-title">Clinical robotics and metabolic control</div>
+        <div class="project-desc">Early market research work around automated glucose control for hospital care.</div>
+      </a>
+      <a class="project-card" href="https://github.com/isakrs/GeodesicsInHeat" target="_blank" rel="noopener">
+        <div class="project-kicker">IIT Bombay</div>
+        <div class="project-title">Geodesics in heat</div>
+        <div class="project-desc">C++ implementation of a geometry-processing method for finding distances on three-dimensional meshes.</div>
+      </a>
     </div>
   </section>
 
@@ -561,22 +831,22 @@
       <div class="skill-card">
         <div class="skill-icon">🏗️</div>
         <div class="skill-name">Platform &amp; Data</div>
-        <div class="skill-tags">Azure Databricks, Spark, SQL, ADF, event-driven design</div>
+        <div class="skill-tags">Azure Databricks, Apache Spark, SQL, Azure Data Factory, event-driven design</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">☁️</div>
         <div class="skill-name">Cloud &amp; Infrastructure</div>
-        <div class="skill-tags">Azure, AWS, Terraform, CloudFormation, GitHub Actions, CI/CD</div>
+        <div class="skill-tags">Microsoft Azure, Amazon Web Services, Terraform, CloudFormation, GitHub Actions, continuous delivery</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🤖</div>
         <div class="skill-name">Machine Learning</div>
-        <div class="skill-tags">Python 7+ yrs, regression, classification, anomaly detection, A/B testing</div>
+        <div class="skill-tags">Python, regression, classification, anomaly detection, experimentation</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🖥️</div>
-        <div class="skill-name">Frontend &amp; APIs</div>
-        <div class="skill-tags">React, TypeScript, backend-for-frontend, Bit component systems, API-first</div>
+        <div class="skill-name">Frontend &amp; application programming interfaces</div>
+        <div class="skill-tags">React, TypeScript, backend-for-frontend, Bit component systems, application programming interface-first design</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">📦</div>
@@ -586,7 +856,7 @@
       <div class="skill-card">
         <div class="skill-icon">🎓</div>
         <div class="skill-name">Education</div>
-        <div class="skill-tags">MSc Industrial Economics — NTNU. Exchanges: TUM, IIT Bombay, Mannheim, Boston University</div>
+        <div class="skill-tags">Master of Science in Industrial Economics at the Norwegian University of Science and Technology. Exchanges: Technical University of Munich, IIT Bombay, Mannheim, Boston University</div>
       </div>
     </div>
   </section>
@@ -616,7 +886,7 @@
   </section>
 
   <footer class="site-footer">
-    <p>Built with Claude Code · <a href="https://github.com/isakrs/isakrs">github.com/isakrs/isakrs</a></p>
+    <p>Built with Codex · <a href="https://github.com/isakrs/isakrs">github.com/isakrs/isakrs</a></p>
   </footer>
 
 </div>
