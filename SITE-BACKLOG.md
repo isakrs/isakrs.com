@@ -46,7 +46,8 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Find the professor webpage connected to the project.
   - Consider a small project page if there are enough images.
 - Revolve NTNU:
-  - The current proof card points to the official Revolve Garage page for the KOG Arctos R electric race car.
+  - Revolve is kept as a smaller earlier-foundation note on the homepage, not a selected proof card.
+  - The current link points to the official Revolve Garage page for the KOG Arctos R electric race car.
   - Add the relevant year/team page if available.
   - Add images and consider a dedicated subpage if the visual material is strong enough.
 - Admetsys:
