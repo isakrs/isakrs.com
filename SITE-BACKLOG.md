@@ -24,6 +24,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Consider a compact `/work/` or `/archive/` page inspired by academic publication lists: date, title, short contribution, artifact links, and optional thumbnail.
   - Use this for older but meaningful work that should not crowd the homepage, such as Revolve, IIT Bombay, Blank, Oda, and early research or student projects.
   - Keep the homepage as the curated version; let the archive hold the full trail of proof.
+  - Keep generic skills off the homepage. If skills need to reappear, make them project tags or archive filters tied to concrete work.
 - LinkedIn pass:
   - Find the best Vipps hackathon post.
   - Find Yara campaign posts and manager posts from Taimur, Kyrre, Marcus, Ajeet, and Thomas.

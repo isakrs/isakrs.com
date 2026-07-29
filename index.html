@@ -526,43 +526,6 @@
 
     .project-link:hover { text-decoration: underline; }
 
-    /* ── Skills grid ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-    }
-
-    .skill-card {
-      background: var(--card);
-      border: 1px solid var(--rule);
-      border-radius: var(--radius-md);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      transition: border-color .2s, box-shadow .2s, transform .2s;
-    }
-
-    .skill-card:hover {
-      border-color: var(--vipps);
-      box-shadow: 0 4px 24px rgba(47,125,98,.12);
-      transform: translateY(-2px);
-    }
-
-    .skill-icon { font-size: 20px; margin-bottom: 10px; }
-
-    .skill-name {
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: var(--ink);
-    }
-
-    .skill-tags {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
     /* ── Links section ── */
     .link-row {
       display: grid;
@@ -634,7 +597,6 @@
       .stats { grid-template-columns: 1fr; }
       .link-row { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
       .hero-grid { grid-template-columns: 1fr; }
       .profile-photo-wrap { width: 132px; justify-self: start; }
       .profile-peek {
@@ -667,7 +629,6 @@
     <nav class="topbar-links">
       <a href="#work">Work</a>
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -884,44 +845,6 @@
         <div class="project-title">isakrs.com source</div>
         <div class="project-desc">A small, static GitHub Pages portfolio built to keep public proof links close to the work.</div>
       </a>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <p class="section-label">Skills</p>
-    <h2 class="section-title">What I work with</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon">🏗️</div>
-        <div class="skill-name">Platform &amp; Data</div>
-        <div class="skill-tags">Azure Databricks, SQL, Azure Data Factory, event-driven design, data product architecture</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">☁️</div>
-        <div class="skill-name">Cloud &amp; Infrastructure</div>
-        <div class="skill-tags">Microsoft Azure, Amazon Web Services, Terraform, CloudFormation, GitHub Actions, continuous integration and continuous delivery</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">Machine Learning</div>
-        <div class="skill-tags">Python, regression, classification, anomaly detection, experimentation</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🖥️</div>
-        <div class="skill-name">Frontend &amp; application programming interfaces</div>
-        <div class="skill-tags">React, TypeScript, backend-for-frontend, Bit component systems, application programming interface-first design</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📦</div>
-        <div class="skill-name">Product</div>
-        <div class="skill-tags">Strategy, backlog prioritization, user research, experimentation, commercial focus</div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🎓</div>
-        <div class="skill-name">Education</div>
-        <div class="skill-tags">Master of Science in Industrial Economics at the Norwegian University of Science and Technology. Exchanges: Technical University of Munich, IIT Bombay, Mannheim, Boston University</div>
-      </div>
     </div>
   </section>
 
