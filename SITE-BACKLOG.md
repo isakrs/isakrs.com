@@ -11,6 +11,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 - Replace the homepage slideshow with a smaller profile-photo hover preview to keep the landing page more professional.
 - Move the visual accent away from Vipps orange and toward a warmer ivory and sage palette.
 - Use Max Schrøder's site as inspiration for keeping the base design restrained while letting real work visuals carry more of the personality.
+- Use Siddhartha Chaudhuri's site as inspiration for a more work-focused proof archive: dense, dated, link-rich, and centered on concrete outputs.
 
 ## Needs private assets or decisions
 
@@ -19,6 +20,10 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Keep the homepage professional by using only a few selected personal photos in the profile-hover preview.
   - Move larger personal photo sets to a later spare-time page rather than the main landing page.
   - If original work media cannot be shared, create small explanatory diagrams or cropped public screenshots instead of using stock-like visuals.
+- Work archive pass:
+  - Consider a compact `/work/` or `/archive/` page inspired by academic publication lists: date, title, short contribution, artifact links, and optional thumbnail.
+  - Use this for older but meaningful work that should not crowd the homepage, such as Revolve, IIT Bombay, Blank, Oda, and early research or student projects.
+  - Keep the homepage as the curated version; let the archive hold the full trail of proof.
 - LinkedIn pass:
   - Find the best Vipps hackathon post.
   - Find Yara campaign posts and manager posts from Taimur, Kyrre, Marcus, Ajeet, and Thomas.
