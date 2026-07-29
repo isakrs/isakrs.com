@@ -38,6 +38,10 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 - Admetsys:
   - Add the YouTube presentation link once found.
   - Consider whether the recommendation letter should remain private or be referenced only in application materials.
+- Older CV archive:
+  - Consider a small `/revolve/` page with the KOG Arctos R work, cost analyst role, and Formula Student Cost Event podium context.
+  - Consider a short Admetsys proof page if the public presentation or video is found.
+  - Consider whether student assistant work in Algorithms and Data Structures, ENT3R mentoring, and Oslo Commerce School debate team belong on an "early foundations" page rather than the main homepage.
 
 ## Possible structure
 

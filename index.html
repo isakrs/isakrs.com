@@ -405,6 +405,28 @@
     }
     .tl-desc a:hover { text-decoration: underline; }
 
+    .tl-points {
+      display: grid;
+      gap: 5px;
+      margin: 0;
+      padding-left: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .tl-points li::marker {
+      color: var(--vipps);
+    }
+
+    .tl-points a {
+      color: var(--vipps);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .tl-points a:hover { text-decoration: underline; }
+
     .proof-links {
       display: flex;
       flex-wrap: wrap;
@@ -641,7 +663,7 @@
   <div class="hero">
     <div class="hero-grid">
       <div>
-        <p class="hero-eyebrow">Oslo, Norway · Open to opportunities</p>
+        <p class="hero-eyebrow">Oslo, Norway</p>
         <h1 class="hero-name">
           Isak<br>
           Rathe <span class="last">Støre</span>
@@ -700,7 +722,11 @@
           <div class="tl-period">March 2025 - Present</div>
           <div class="tl-title">Platform Engineer (Data Platform)</div>
           <div class="tl-org"><a href="https://vippsmobilepay.com/" target="_blank" rel="noopener">Vipps MobilePay</a> · Oslo</div>
-          <div class="tl-desc">Build and maintain shared data infrastructure utilized by product teams. Built the data export service that sends golden layer data back to product teams, and architected and implemented the SQL tables and SQL compute for Vipps Wrapped 2025 in two weeks.</div>
+          <ul class="tl-points">
+            <li>Build and maintain shared data infrastructure used by product teams.</li>
+            <li>Built the data export service that sends golden layer data back to product teams.</li>
+            <li>Architected and implemented the SQL tables and SQL compute for Vipps Wrapped 2025 in two weeks.</li>
+          </ul>
           <div class="proof-links">
             <a class="proof-link" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener">LinkedIn profile</a>
           </div>
@@ -717,7 +743,9 @@
           <div class="tl-period dim">2024 · 3 months</div>
           <div class="tl-title">Founder in Residence</div>
           <div class="tl-org"><a href="https://www.antler.co/locations" target="_blank" rel="noopener">Antler</a> · Oslo</div>
-          <div class="tl-desc">Identified and validated new product opportunities through user research, technical experiments, and market analysis.</div>
+          <ul class="tl-points">
+            <li>Explored new business ideas through problem framing, technical experiments, and market analysis.</li>
+          </ul>
         </div>
       </div>
 
@@ -730,7 +758,12 @@
           <div class="tl-period dim">2019 - February 2025</div>
           <div class="tl-title">Data Scientist &amp; Software Engineer</div>
           <div class="tl-org"><a href="https://www.yara.com/" target="_blank" rel="noopener">Yara International ASA</a> · Oslo</div>
-          <div class="tl-desc">Owned lifecycle management and monitoring for 8 production machine learning solutions that optimized Yara's most important ammonia production. Worked across data science, data pipelines, infrastructure, and frontend, and acted as spokesperson and architect for Yara's award-winning Schibsted recruitment campaign.</div>
+          <ul class="tl-points">
+            <li>Owned lifecycle management and monitoring for 8 production machine learning solutions that optimized Yara's most important ammonia production.</li>
+            <li>Delivered $3-4 million in annual savings via optimization and predictive analytics.</li>
+            <li>Wrote React frontend components for Golden Batch, a web application suggesting factory settings for NPK production.</li>
+            <li>Acted as spokesperson and architect for Yara's award-winning Schibsted recruitment campaign.</li>
+          </ul>
           <div class="proof-links">
             <a class="proof-link" href="https://aws.amazon.com/blogs/machine-learning/how-yara-is-using-mlops-features-of-amazon-sagemaker-to-scale-energy-optimization-across-their-ammonia-plants/" target="_blank" rel="noopener">Amazon Web Services article</a>
             <a class="proof-link" href="https://www.finn.no/bedriftskunde/aktuelt/finn-jobb/the-hunt-2023" target="_blank" rel="noopener">FINN jobb Awards</a>
@@ -749,7 +782,11 @@
           <div class="tl-period dim">2019 · Summer</div>
           <div class="tl-title">Software Developer</div>
           <div class="tl-org"><a href="https://oda.com/no/about/about-oda-group/" target="_blank" rel="noopener">Oda Norway</a> · Oslo</div>
-          <div class="tl-desc">Built Oda's warehouse simulation from scratch and developed an optimization algorithm for minimizing order fulfillment time. Reduced picking time by 14.9%, equal to approximately 13 million Norwegian kroner in recurring annual cost reduction at the time.</div>
+          <ul class="tl-points">
+            <li>Built Oda's warehouse simulation from scratch and developed an optimization algorithm for minimizing order fulfillment time.</li>
+            <li>Reduced picking time by 14.9%, equal to approximately 13 million Norwegian kroner in recurring annual cost reduction at the time.</li>
+            <li>Handed over a scalable codebase for further optimization work.</li>
+          </ul>
           <div class="proof-links">
             <a class="proof-link" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">Master thesis</a>
             <a class="proof-link" href="https://drive.google.com/file/d/15ugsTqIl5AT9ZfF6gDCZiqHd0Gm5d0Qp/view?usp=sharing" target="_blank" rel="noopener">Paper</a>
@@ -766,7 +803,9 @@
           <div class="tl-period dim">2018 · Winter</div>
           <div class="tl-title">Data Scientist</div>
           <div class="tl-org"><a href="https://www.cognite.com/en" target="_blank" rel="noopener">Cognite</a> · Oslo</div>
-          <div class="tl-desc">Built anomaly detection for industrial time series using unsupervised learning, Dockerized for production.</div>
+          <ul class="tl-points">
+            <li>Built anomaly detection for industrial time series using unsupervised learning in Dockerized environments.</li>
+          </ul>
         </div>
       </div>
 
@@ -778,7 +817,10 @@
           <div class="tl-period dim">2017 · Summer</div>
           <div class="tl-title">Software Developer</div>
           <div class="tl-org"><a href="https://blank.no/" target="_blank" rel="noopener">Blank</a> · Oslo</div>
-          <div class="tl-desc">Implemented the first search engine for the <a href="https://www.folq.no" target="_blank" rel="noopener">folq.no</a> consulting marketplace using natural language processing, Word2Vec models, Elasticsearch, and optimization algorithms. Helped turn unstructured consultant profile data into a ranked discovery experience where matching quality directly mattered to the product.</div>
+          <ul class="tl-points">
+            <li>Implemented the first search engine for the <a href="https://www.folq.no" target="_blank" rel="noopener">folq.no</a> consulting marketplace using natural language processing, Word2Vec models, Elasticsearch, and optimization algorithms.</li>
+            <li>Helped replace manual consultant suggestions with ranked discovery based on experience, availability, and matching quality.</li>
+          </ul>
         </div>
       </div>
 
@@ -808,12 +850,12 @@
       <a class="project-card" href="https://www.revolve.no/cars" target="_blank" rel="noopener">
         <div class="project-kicker">Revolve NTNU</div>
         <div class="project-title">KOG Arctos R electric race car</div>
-        <div class="project-desc">Norway's first electric race car, built by the Revolve NTNU Formula Student team.</div>
+        <div class="project-desc">Cost analyst on the team behind Norway's first electric race car; third place in the Formula Student Cost Event.</div>
       </a>
       <a class="project-card" href="https://admetsys.com/" target="_blank" rel="noopener">
         <div class="project-kicker">Admetsys</div>
         <div class="project-title">Clinical robotics and metabolic control</div>
-        <div class="project-desc">Early market research work around automated glucose control for hospital care.</div>
+        <div class="project-desc">Developed pricing model work and presented the company at healthcare conferences and investor relations events.</div>
       </a>
       <a class="project-card" href="https://github.com/isakrs/GeodesicsInHeat" target="_blank" rel="noopener">
         <div class="project-kicker">IIT Bombay</div>
@@ -831,12 +873,12 @@
       <div class="skill-card">
         <div class="skill-icon">🏗️</div>
         <div class="skill-name">Platform &amp; Data</div>
-        <div class="skill-tags">Azure Databricks, Apache Spark, SQL, Azure Data Factory, event-driven design</div>
+        <div class="skill-tags">Azure Databricks, SQL, Azure Data Factory, event-driven design, data product architecture</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">☁️</div>
         <div class="skill-name">Cloud &amp; Infrastructure</div>
-        <div class="skill-tags">Microsoft Azure, Amazon Web Services, Terraform, CloudFormation, GitHub Actions, continuous delivery</div>
+        <div class="skill-tags">Microsoft Azure, Amazon Web Services, Terraform, CloudFormation, GitHub Actions, continuous integration and continuous delivery</div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">🤖</div>
@@ -886,7 +928,7 @@
   </section>
 
   <footer class="site-footer">
-    <p>Built with Codex · <a href="https://github.com/isakrs/isakrs">github.com/isakrs/isakrs</a></p>
+    <p>Built with Codex · <a href="https://github.com/isakrs/isakrs.com">github.com/isakrs/isakrs.com</a></p>
   </footer>
 
 </div>
