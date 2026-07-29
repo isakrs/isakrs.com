@@ -510,6 +510,22 @@
       line-height: 1.55;
     }
 
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .project-link {
+      color: var(--vipps);
+      font-size: 11px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .project-link:hover { text-decoration: underline; }
+
     /* ── Skills grid ── */
     .skills-grid {
       display: grid;
@@ -789,6 +805,7 @@
           </ul>
           <div class="proof-links">
             <a class="proof-link" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">Master thesis</a>
+            <a class="proof-link" href="https://github.com/isakrs/MasterThesis" target="_blank" rel="noopener">Source code</a>
             <a class="proof-link" href="https://drive.google.com/file/d/15ugsTqIl5AT9ZfF6gDCZiqHd0Gm5d0Qp/view?usp=sharing" target="_blank" rel="noopener">Paper</a>
           </div>
         </div>
@@ -842,16 +859,16 @@
         <div class="project-title">Award-winning recruitment campaign</div>
         <div class="project-desc">Yara won Årets kampanje 2023 at FINN jobb Awards.</div>
       </a>
-      <a class="project-card" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">
+      <article class="project-card">
         <div class="project-kicker">Oda</div>
         <div class="project-title">Warehouse simulation and optimization</div>
-        <div class="project-desc">Full thesis behind the warehouse simulation and 14.9 percent picking-time reduction.</div>
-      </a>
-      <a class="project-card" href="https://github.com/isakrs/MasterThesis" target="_blank" rel="noopener">
-        <div class="project-kicker">GitHub</div>
-        <div class="project-title">MasterThesis repository</div>
-        <div class="project-desc">Source code for the simulation-based genetic algorithm behind the Oda warehouse optimization work.</div>
-      </a>
+        <div class="project-desc">Master thesis, paper, and source code behind the warehouse simulation later implemented and put into production at Oda.</div>
+        <div class="project-links">
+          <a class="project-link" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">Thesis</a>
+          <a class="project-link" href="https://github.com/isakrs/MasterThesis" target="_blank" rel="noopener">Source code</a>
+          <a class="project-link" href="https://drive.google.com/file/d/15ugsTqIl5AT9ZfF6gDCZiqHd0Gm5d0Qp/view?usp=sharing" target="_blank" rel="noopener">Paper</a>
+        </div>
+      </article>
       <a class="project-card" href="https://www.revolve.no/cars" target="_blank" rel="noopener">
         <div class="project-kicker">Revolve NTNU</div>
         <div class="project-title">KOG Arctos R electric race car</div>

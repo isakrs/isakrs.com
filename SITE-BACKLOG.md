@@ -36,6 +36,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Find or export a simulator video.
   - The `MasterThesis` repository is public and linked from the homepage.
   - Consider a dedicated `/oda/` subpage with the video, thesis, paper, and a short explanation of the optimization result.
+  - `CaseDiscrete` is a public discrete-optimization repository for minimizing warehouse walking distance. It probably belongs as supporting material on `/oda/` or `/archive/`, not as a separate homepage card.
 - Data platform writing:
   - `example-platform-config` is currently private. Either make it public or create a public writeup/repository called something like `modern-data-platform-example`.
 - IIT Bombay:
