@@ -453,6 +453,68 @@
       background: var(--vipps-light);
     }
 
+    .work-photo-trigger {
+      position: relative;
+      cursor: default;
+    }
+
+    .work-photo-trigger:focus-visible {
+      border-color: var(--vipps);
+      background: var(--vipps-light);
+    }
+
+    .work-photo-peek {
+      position: absolute;
+      left: 0;
+      bottom: calc(100% + 12px);
+      width: 280px;
+      height: 190px;
+      opacity: 0;
+      transform: translateY(8px) scale(.97);
+      transition: opacity .18s ease, transform .22s ease;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .work-photo-trigger:hover .work-photo-peek,
+    .work-photo-trigger:focus-visible .work-photo-peek {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .work-photo {
+      position: absolute;
+      object-fit: cover;
+      border-radius: 10px;
+      background: var(--card);
+      border: 3px solid var(--card);
+      box-shadow: 0 10px 24px rgba(21,22,26,.16);
+    }
+
+    .work-photo:nth-child(1) {
+      left: 0;
+      top: 38px;
+      width: 132px;
+      height: 88px;
+      transform: rotate(-6deg);
+    }
+
+    .work-photo:nth-child(2) {
+      left: 98px;
+      top: 0;
+      width: 92px;
+      height: 118px;
+      transform: rotate(5deg);
+    }
+
+    .work-photo:nth-child(3) {
+      left: 156px;
+      top: 70px;
+      width: 124px;
+      height: 82px;
+      transform: rotate(-3deg);
+    }
+
     .tl-badge {
       display: inline-block;
       margin-top: 8px;
@@ -724,6 +786,14 @@
           </ul>
           <div class="proof-links">
             <a class="proof-link" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener">LinkedIn profile</a>
+            <span class="proof-link work-photo-trigger" tabindex="0" aria-label="Preview Vipps work photos">
+              Work photos
+              <span class="work-photo-peek" aria-hidden="true">
+                <img class="work-photo" src="assets/work/vipps/hackathon-crowd.jpg" alt="">
+                <img class="work-photo" src="assets/work/vipps/hackathon-win.jpg" alt="">
+                <img class="work-photo" src="assets/work/vipps/photo-booth.jpg" alt="">
+              </span>
+            </span>
           </div>
           <a class="tl-badge" href="https://www.linkedin.com/feed/update/urn:li:activity:7432705801934237696/" target="_blank" rel="noopener" style="text-decoration:none;">🏆 Hackathon Winner 2025 - "Buy When Available"</a>
         </div>

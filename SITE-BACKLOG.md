@@ -9,6 +9,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 - Add a profile photo to the hero.
 - Add a first homepage photo slideshow from local web-ready image copies.
 - Replace the homepage slideshow with a smaller profile-photo hover preview to keep the landing page more professional.
+- Add a small Vipps work-photo hover preview to the Vipps timeline entry.
 - Move the visual accent away from Vipps orange and toward a warmer ivory and sage palette.
 - Use Max Schrøder's site as inspiration for keeping the base design restrained while letting real work visuals carry more of the personality.
 - Use Siddhartha Chaudhuri's site as inspiration for a more work-focused proof archive: dense, dated, link-rich, and centered on concrete outputs.
