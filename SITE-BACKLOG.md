@@ -5,7 +5,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 ## Public-link improvements already started
 
 - Add company links for Vipps MobilePay, Yara, Antler, Oda, Cognite, and Blank.
-- Add proof links for the Amazon Web Services Yara article, FINN jobb Awards, the Aftenposten/Yara recruitment campaign, the Oda thesis, the Oda paper, Revolve NTNU, Admetsys, and the public `GeodesicsInHeat` repository.
+- Add proof links for the Amazon Web Services Yara article, FINN jobb Awards, the Aftenposten/Yara recruitment campaign, the Oda thesis, the Oda paper, MasterThesis, Revolve NTNU, `GeodesicsInHeat`, and the `isakrs.com` source repository.
 - Add a profile photo to the hero.
 - Add a first homepage photo slideshow from local web-ready image copies.
 - Replace the homepage slideshow with a smaller profile-photo hover preview to keep the landing page more professional.
@@ -23,7 +23,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Consider a dedicated `/spare-time/` page for the full photo set once the strongest images are selected.
 - Oda:
   - Find or export a simulator video.
-  - Decide whether the private `MasterThesis` repository should become public.
+  - The `MasterThesis` repository is public and linked from the homepage.
   - Consider a dedicated `/oda/` subpage with the video, thesis, paper, and a short explanation of the optimization result.
 - Data platform writing:
   - `example-platform-config` is currently private. Either make it public or create a public writeup/repository called something like `modern-data-platform-example`.
@@ -36,11 +36,11 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Add the relevant year/team page if available.
   - Add images and consider a dedicated subpage if the visual material is strong enough.
 - Admetsys:
-  - Add the YouTube presentation link once found.
-  - Consider whether the recommendation letter should remain private or be referenced only in application materials.
+  - Keep off the homepage for now; it does not feel representative enough of the public career narrative.
+  - Add the YouTube presentation link only if creating an archive or early-career page later.
 - Older CV archive:
   - Consider a small `/revolve/` page with the KOG Arctos R work, cost analyst role, and Formula Student Cost Event podium context.
-  - Consider a short Admetsys proof page if the public presentation or video is found.
+  - Consider a short Admetsys archive item only if the public presentation or video is found.
   - Consider whether student assistant work in Algorithms and Data Structures, ENT3R mentoring, and Oslo Commerce School debate team belong on an "early foundations" page rather than the main homepage.
 
 ## Possible structure
