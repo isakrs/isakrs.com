@@ -28,6 +28,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 - LinkedIn pass:
   - Find the best Vipps hackathon post.
   - Find Yara campaign posts and manager posts from Taimur, Kyrre, Marcus, Ajeet, and Thomas.
+  - Find the public Antler post where Isak is pictured or tagged, if it exists and still feels relevant.
   - Find posts from Oda colleagues if they are public and relevant.
 - Google Photos pass:
   - Optional: use Google Photos later to replace or expand the first local slideshow set.
