@@ -5,7 +5,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 ## Public-link improvements already started
 
 - Add company links for Vipps MobilePay, Yara, Antler, Oda, Cognite, and Blank.
-- Add proof links for the Amazon Web Services Yara article, FINN jobb Awards, the Aftenposten/Yara recruitment campaign, the Oda thesis, the Oda paper, MasterThesis, Revolve NTNU, `GeodesicsInHeat`, and the `isakrs.com` source repository.
+- Add proof links for the Amazon Web Services Yara article, FINN jobb Awards, the Aftenposten/Yara recruitment campaign, the Oda thesis, the Oda paper, MasterThesis, Revolve NTNU, `GeodesicsInHeat`, and `modern-data-platform-example`.
 - Add a profile photo to the hero.
 - Add a first homepage photo slideshow from local web-ready image copies.
 - Replace the homepage slideshow with a smaller profile-photo hover preview to keep the landing page more professional.
@@ -39,7 +39,8 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Consider a dedicated `/oda/` subpage with the video, thesis, paper, and a short explanation of the optimization result.
   - `CaseDiscrete` is a public discrete-optimization repository for minimizing warehouse walking distance. It probably belongs as supporting material on `/oda/` or `/archive/`, not as a separate homepage card.
 - Data platform writing:
-  - `example-platform-config` is currently private. Either make it public or create a public writeup/repository called something like `modern-data-platform-example`.
+  - `modern-data-platform-example` is public and linked from the homepage.
+  - Continue improving it with clearer architecture diagrams, validation examples, and a short implementation walkthrough.
 - IIT Bombay:
   - Add screenshots or images from the geometry-processing project.
   - Find the professor webpage connected to the project.
