@@ -9,10 +9,16 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
 - Add a profile photo to the hero.
 - Add a first homepage photo slideshow from local web-ready image copies.
 - Replace the homepage slideshow with a smaller profile-photo hover preview to keep the landing page more professional.
-- Move the visual accent away from Vipps orange and toward the same blue used in the Snøkam application materials.
+- Move the visual accent away from Vipps orange and toward a warmer ivory and sage palette.
+- Use Max Schrøder's site as inspiration for keeping the base design restrained while letting real work visuals carry more of the personality.
 
 ## Needs private assets or decisions
 
+- Visual proof pass:
+  - Prioritize work artifacts over decorative photography: Oda simulator video, Yara campaign screenshots, Yara machine learning architecture or article visuals, Vipps Wrapped screenshots or an architecture sketch if shareable, Revolve car photos, and IIT Bombay geometry-processing images.
+  - Keep the homepage professional by using only a few selected personal photos in the profile-hover preview.
+  - Move larger personal photo sets to a later spare-time page rather than the main landing page.
+  - If original work media cannot be shared, create small explanatory diagrams or cropped public screenshots instead of using stock-like visuals.
 - LinkedIn pass:
   - Find the best Vipps hackathon post.
   - Find Yara campaign posts and manager posts from Taimur, Kyrre, Marcus, Ajeet, and Thomas.
