@@ -35,7 +35,7 @@ This is the working backlog for the richer personal site refresh. Keep GitHub Pa
   - Prefer images that show range: engineering, outdoors, travel, presenting, friends, and work contexts.
   - Consider a dedicated `/spare-time/` page for the full photo set once the strongest images are selected.
 - Oda:
-  - Find or export a simulator video.
+  - The simulator debug video is stored in `MasterThesis` and linked from the homepage.
   - The `MasterThesis` repository is public and linked from the homepage.
   - Consider a dedicated `/oda/` subpage with the simulator video, thesis, source code, and a short explanation of the optimization result.
   - `CaseDiscrete` is a public discrete-optimization repository for minimizing warehouse walking distance. It probably belongs as supporting material on `/oda/` or `/archive/`, not as a separate homepage card.
