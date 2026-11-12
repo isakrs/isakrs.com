@@ -1,0 +1,30 @@
+{
+  "common": "Create a single minimal hand-drawn sketch for an educational blog explaining temperature data. Landscape 3:2, large simple ink drawings centred in a spacious composition. Plain very light warm ivory paper (#fffdf7), loose imperfect charcoal pen strokes with little overlaps and doubled marks, tiny muted red accents only for temperatures or the moving data signal. Whiteboard science-explainer look, as if quickly sketched with a real fineliner, not a polished vector diagram. NO rectangular architecture cards, no boxes around the scene, no corporate infographic styling, no polished UI, no shading or scenery, no decorative objects, no title, no long captions, no numbered steps, no logos. Keep generous margins. Only one new idea, at most three main objects. This is one of five separate drawings, NOT a collage or multi-panel sheet. Simple readable hand-lettered words only where specified. Repeated motif across the series is a little red temperature-data dot. Do not include people unless specified. The blog supplies the caption separately. ",
+  "briefs": [
+    [
+      "01-signal",
+      "A thermometer drawn on the left with a short red column, a thin trailing red dotted signal crosses the centre, and three small loose paper slips on the right, slightly fanned. Each slip has a tiny clock stroke and just one readable red temperature: '4.2°C', '4.4°C', '4.8°C'. A tiny handwritten 'A' next to the thermometer identifies the sensor. The idea is a physical temperature becoming timestamped readings. No data table, no spreadsheet, no trucks. Minimal marks."
+    ],
+    [
+      "02-shared-data",
+      "Three tiny thermometer doodles down the left edge, with small red dots travelling from each to ONE shared open notebook on the right. The notebook has a few loosely ruled columns and rows of little ink marks; two tiny column headings 'time' and '°C'. A small checkmark and a small key drawn next to the notebook express checked and controlled data. A short handwritten label beneath it says 'shared readings'. The idea is readings from multiple sensors becoming one usable shared dataset. No cylinders, no architecture boxes, no separate datasets or arrows to unrelated systems."
+    ],
+    [
+      "03-discovery",
+      "On the left an open notebook of temperature readings (short ruled columns, small red dots). In the centre a magnifying glass over a gently rising red hand-drawn temperature line. On the right a single loose paper sheet bearing 'SQL' at the top and three short scribbled code-like lines, not paragraphs. A short irregular ink arrow connects the notebook, the discovered pattern and the saved SQL sheet. The idea is exploring shared data and turning a useful question into a query. No person, robot, UI or boxes. The SQL sheet should look like a reusable recipe."
+    ],
+    [
+      "04-model-reuse",
+      "Three loose overlapping recipe-like paper sheets rise like a small staircase left to right. Each has a little 'SQL' at top and three scribbled lines. Their short handwritten names are exactly 'readings', 'warm periods', 'status'. Thin hand-drawn arrows connect the output of the first to the second, then the output of the second to the third. A little red dot is carried along the arrows and appears on all three sheets, showing the SAME temperature data moving through reusable models. The sheets are loose imperfect paper, NOT tidy architecture cards. No sources being fetched again, no separate parallel arrows, no gears, no people. The sole idea is one SQL model building on the previous one."
+    ],
+    [
+      "05-product",
+      "On the left the same loose SQL recipe sheet as the previous sketch, hand-labelled 'status' and bearing a small red data dot. A thin irregular arrow carries that dot to a casually sketched phone on the right. Inside the phone are a tiny thermometer, a short rising red temperature sparkline, and the handwritten words 'Check temperature'. No realistic polished app screen; just a few pen strokes outlining a phone and the simple signal display. The idea is the shared model's result returning to an operational product, not an agent autonomously controlling equipment. No truck, people, scenery, logos or extra explanations."
+    ]
+  ],
+  "method": "Built-in image generation; JPEG export from PNG originals",
+  "refinements": {
+    "02-shared-data": "Keep composition and style. Replace every temperature with 4.2, 4.4, 4.8 degrees Celsius in matching source and notebook order.",
+    "03-discovery": "Keep composition and style. Notebook rows: 10:00 / 4.2, 10:01 / 4.4, 10:02 / 4.8. SQL sheet: SELECT ..., FROM readings, GROUP BY ... . Remove numeric WHERE threshold."
+  }
+}
