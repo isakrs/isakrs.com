@@ -305,6 +305,10 @@
     }
 
     .stat-val {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2em;
       font-size: clamp(1.8rem, 5vw, 2.6rem);
       font-weight: 900;
       letter-spacing: -0.04em;
@@ -313,9 +317,9 @@
       margin-bottom: 6px;
     }
 
-    .stat-val-text { font-size: clamp(1.35rem, 3.4vw, 1.75rem); line-height: 1.1; }
-
     .stat-label {
+      min-height: 2.8em;
+      line-height: 1.4;
       font-size: 11px;
       color: var(--muted);
       text-transform: uppercase;
@@ -867,7 +871,7 @@
   <!-- Stats -->
   <div class="stats">
     <div class="stat">
-      <div class="stat-val stat-val-text">Data platform</div>
+      <div class="stat-val">Data platform</div>
       <div class="stat-label"><a class="evidence-link" href="https://vippsmobilepay.com/" target="_blank" rel="noopener">Vipps</a></div>
     </div>
     <div class="stat">
