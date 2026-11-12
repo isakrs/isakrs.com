@@ -8,3 +8,5 @@ Local SVG assets used as decorative companions to visible text labels.
 - Object storage and access management: original generic illustrations for this article, not vendor logos.
 
 Brand names and marks identify the technologies discussed; no affiliation is implied.
+
+- Terraform and OpenTofu: Simple Icons, CC0-1.0; `icons/terraform.svg` and `icons/opentofu.svg`. Brand-colour fills added.
