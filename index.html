@@ -763,49 +763,20 @@
       padding: 0;
       margin: 16px 0 0;
     }
-    .role-tech li { display: block; }
-    .tech-mark {
-      position: relative;
+    .role-tech li {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      padding: 8px;
-      border: 0;
-      border-radius: 9px;
-      background: transparent;
-      cursor: help;
-      color: var(--ink);
-      font: inherit;
-    }
-    .tech-mark:hover, .tech-mark:focus-visible { background: var(--vipps-light); }
-    .tech-mark:focus-visible { outline: 2px solid var(--vipps); outline-offset: 2px; }
-    .tech-mark img { width: 24px; height: 24px; object-fit: contain; }
-    .tech-tooltip {
-      position: absolute;
-      bottom: calc(100% + 8px);
-      left: 50%;
-      transform: translateX(-50%);
-      width: max-content;
-      max-width: 220px;
+      gap: 7px;
       padding: 7px 10px;
-      border-radius: 7px;
-      background: var(--ink);
-      color: var(--bg);
+      border: 1px solid var(--rule);
+      border-radius: 9px;
+      background: var(--card);
       font-size: 11px;
       font-weight: 600;
-      line-height: 1.5;
-      text-align: center;
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 5;
+      line-height: 1.3;
     }
-    .tech-mark:hover .tech-tooltip, .tech-mark:focus .tech-tooltip {
-      visibility: visible;
-      opacity: 1;
-    }
+    .role-tech img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
+    .role-tech-note { font-size: 11px; color: var(--muted); line-height: 1.6; margin-top: 9px; }
   </style>
 </head>
 <body>
@@ -891,9 +862,9 @@
             <li>Develop software in the Shopping Assistant team.</li>
           </ul>
           <ul class="role-tech" aria-label="Technologies used at Shopping Assistant">
-            <li><button class="tech-mark" type="button" aria-label="Swift"><img src="/assets/technology/swift.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Swift</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="TypeScript"><img src="/assets/technology/typescript.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">TypeScript</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="React"><img src="/assets/technology/react.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">React</span></button></li>
+            <li><img src="/assets/technology/swift.svg" width="20" height="20" alt="" aria-hidden="true">Swift</li>
+            <li><img src="/assets/technology/typescript.svg" width="20" height="20" alt="" aria-hidden="true">TypeScript</li>
+            <li><img src="/assets/technology/react.svg" width="20" height="20" alt="" aria-hidden="true">React</li>
           </ul>
         </div>
       </div>
@@ -914,13 +885,13 @@
             <li>Team evangelist for keeping Data Platform aligned with company goals and seen as a fun, high-trust team to work with.</li>
           </ul>
           <ul class="role-tech" aria-label="Technologies used at Vipps Data Platform">
-            <li><button class="tech-mark" type="button" aria-label="Python"><img src="/assets/technology/python.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Python</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="SQL"><img src="/assets/technology/object-storage.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">SQL</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Azure"><img src="/assets/technology/azure.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Azure</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Databricks"><img src="/assets/technology/databricks.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Databricks</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Apache Spark"><img src="/assets/technology/apache-spark.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Apache Spark</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Terraform"><img src="/assets/technology/terraform.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Terraform</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="GitHub Actions"><img src="/assets/technology/github-actions.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">GitHub Actions</span></button></li>
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/object-storage.svg" width="20" height="20" alt="" aria-hidden="true">SQL</li>
+            <li><img src="/assets/technology/azure.svg" width="20" height="20" alt="" aria-hidden="true">Azure</li>
+            <li><img src="/assets/technology/databricks.svg" width="20" height="20" alt="" aria-hidden="true">Databricks</li>
+            <li><img src="/assets/technology/apache-spark.svg" width="20" height="20" alt="" aria-hidden="true">Apache Spark</li>
+            <li><img src="/assets/technology/terraform.svg" width="20" height="20" alt="" aria-hidden="true">Terraform</li>
+            <li><img src="/assets/technology/github-actions.svg" width="20" height="20" alt="" aria-hidden="true">GitHub Actions</li>
           </ul>
           <div class="proof-links">
             <a class="proof-link" href="/data-platform/">My guide to building a good data platform</a>
@@ -969,12 +940,13 @@
             <li>Acted as spokesperson and architect for Yara's <strong>award-winning Schibsted recruitment campaign</strong>.</li>
           </ul>
           <ul class="role-tech" aria-label="Technologies used at Yara">
-            <li><button class="tech-mark" type="button" aria-label="Python"><img src="/assets/technology/python.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Python</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="AWS: SageMaker, Lambda and CloudFormation"><img src="/assets/technology/aws.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">AWS: SageMaker, Lambda and CloudFormation</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Docker"><img src="/assets/technology/docker.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Docker</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="React"><img src="/assets/technology/react.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">React</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="TypeScript"><img src="/assets/technology/typescript.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">TypeScript</span></button></li>
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/aws.svg" width="20" height="20" alt="" aria-hidden="true">AWS / SageMaker</li>
+            <li><img src="/assets/technology/docker.svg" width="20" height="20" alt="" aria-hidden="true">Docker</li>
+            <li><img src="/assets/technology/react.svg" width="20" height="20" alt="" aria-hidden="true">React</li>
+            <li><img src="/assets/technology/typescript.svg" width="20" height="20" alt="" aria-hidden="true">TypeScript</li>
           </ul>
+          <p class="role-tech-note">AWS work also included Lambda, CloudFormation and deployment pipelines.</p>
           <div class="proof-links">
             <a class="proof-link" href="https://aws.amazon.com/blogs/machine-learning/how-yara-is-using-mlops-features-of-amazon-sagemaker-to-scale-energy-optimization-across-their-ammonia-plants/" target="_blank" rel="noopener">Amazon Web Services article</a>
             <a class="proof-link" href="https://www.finn.no/bedriftskunde/aktuelt/finn-jobb/the-hunt-2023" target="_blank" rel="noopener">FINN jobb Awards</a>
@@ -999,8 +971,8 @@
             <li>Handed over the solution with <strong>scalable code design</strong> for further optimization work and future extensions of the simulation events.</li>
           </ul>
           <ul class="role-tech" aria-label="Technologies used at Oda">
-            <li><button class="tech-mark" type="button" aria-label="Python"><img src="/assets/technology/python.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Python</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="NumPy"><img src="/assets/technology/numpy.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">NumPy</span></button></li>
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/numpy.svg" width="20" height="20" alt="" aria-hidden="true">NumPy</li>
           </ul>
           <div class="proof-links">
             <a class="proof-link" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">Master thesis</a>
@@ -1023,8 +995,8 @@
             <li>Built anomaly detection for industrial time series using unsupervised learning in Dockerized environments.</li>
           </ul>
           <ul class="role-tech" aria-label="Technologies used at Cognite">
-            <li><button class="tech-mark" type="button" aria-label="Python"><img src="/assets/technology/python.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Python</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Docker"><img src="/assets/technology/docker.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Docker</span></button></li>
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/docker.svg" width="20" height="20" alt="" aria-hidden="true">Docker</li>
           </ul>
         </div>
       </div>
@@ -1042,11 +1014,11 @@
             <li>Helped replace manual consultant suggestions with <strong>ranked discovery</strong> based on experience, availability, and matching quality.</li>
           </ul>
           <ul class="role-tech" aria-label="Technologies used at Blank / Folq">
-            <li><button class="tech-mark" type="button" aria-label="Python"><img src="/assets/technology/python.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Python</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Flask"><img src="/assets/technology/flask.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Flask</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Elasticsearch"><img src="/assets/technology/elasticsearch.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Elasticsearch</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Docker"><img src="/assets/technology/docker.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Docker</span></button></li>
-            <li><button class="tech-mark" type="button" aria-label="Word2Vec"><img src="/assets/technology/word2vec.svg" width="24" height="24" alt="" aria-hidden="true"><span class="tech-tooltip" aria-hidden="true">Word2Vec</span></button></li>
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/flask.svg" width="20" height="20" alt="" aria-hidden="true">Flask</li>
+            <li><img src="/assets/technology/elasticsearch.svg" width="20" height="20" alt="" aria-hidden="true">Elasticsearch</li>
+            <li><img src="/assets/technology/docker.svg" width="20" height="20" alt="" aria-hidden="true">Docker</li>
+            <li><img src="/assets/technology/word2vec.svg" width="20" height="20" alt="" aria-hidden="true">Word2Vec</li>
           </ul>
         </div>
       </div>
