@@ -254,7 +254,9 @@
       transition: border-color .2s, color .2s;
     }
 
-    .chip:hover { border-color: var(--vipps); color: var(--vipps); }
+    .chip:hover, a.chip:focus-visible { border-color: var(--vipps); color: var(--vipps); }
+    a.chip:focus-visible { outline: 2px solid var(--vipps); outline-offset: 3px; }
+    #oda { scroll-margin-top: 90px; }
 
     .chip .dot {
       width: 6px;
@@ -790,6 +792,7 @@
     .role-tech img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
     .role-tech-note { font-size: 11px; color: var(--muted); line-height: 1.6; margin-top: 9px; }
 
+    .hero-bio a.evidence-link, .stat-label a.evidence-link,
     .tl-points a.evidence-link, .foundation-note a.evidence-link,
     .project-desc a.evidence-link, .role-tech-note a.evidence-link {
       color: inherit;
@@ -840,12 +843,12 @@
           Rathe <span class="last">Støre</span>
         </h1>
         <p class="hero-bio">
-          Software engineer with <strong><span data-experience-start="2017-09" title="Counted from the first developer role in summer 2017">experience since 2017</span></strong> taking products, data platforms, and machine learning systems from idea to production. Now a <strong>software developer in the Shopping Assistant team at Vipps MobilePay</strong>. Strong ownership of end deliveries and technical implementation.
+          Software engineer with <strong><span data-experience-start="2019-08" data-experience-prior-days="173">professional software experience</span></strong> taking products, data platforms, and machine learning systems from idea to production. Now a <strong>software developer in the Shopping Assistant team at <a class="evidence-link" href="https://vippsmobilepay.com/" target="_blank" rel="noopener">Vipps MobilePay</a></strong>. Strong ownership of end deliveries and technical implementation.
         </p>
         <div class="hero-chips">
-          <span class="chip"><span class="dot"></span>Data platforms</span>
+          <a class="chip" href="/data-platform/"><span class="dot"></span>Data platforms</a>
           <span class="chip"><span class="dot"></span>Product-minded engineering</span>
-          <span class="chip"><span class="dot"></span>Optimization systems</span>
+          <a class="chip" href="#oda"><span class="dot"></span>Optimization systems</a>
           <a class="chip" href="https://www.linkedin.com/in/isakrathestoere/" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
         </div>
       </div>
@@ -865,7 +868,7 @@
   <div class="stats">
     <div class="stat">
       <div class="stat-val stat-val-text">Data platform</div>
-      <div class="stat-label">Vipps</div>
+      <div class="stat-label"><a class="evidence-link" href="https://vippsmobilepay.com/" target="_blank" rel="noopener">Vipps</a></div>
     </div>
     <div class="stat">
       <div class="stat-val">14.9%</div>
@@ -965,7 +968,7 @@
           <div class="tl-line"></div>
         </div>
         <div class="tl-body">
-          <div class="tl-period dim">2019 - February 2025</div>
+          <div class="tl-period dim">August 2019 - February 2025</div>
           <div class="tl-title">Data Scientist &amp; Software Engineer</div>
           <div class="tl-org"><a href="https://www.yara.com/" target="_blank" rel="noopener">Yara International ASA</a> · Oslo</div>
           <ul class="tl-points">
@@ -991,7 +994,7 @@
         </div>
       </div>
 
-      <div class="tl-item">
+      <div class="tl-item" id="oda">
         <div class="tl-col">
           <div class="tl-dot dim"></div>
           <div class="tl-line"></div>
