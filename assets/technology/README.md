@@ -18,5 +18,3 @@ Python, Flask, Docker, Elasticsearch, NumPy, Swift, TypeScript, React, Azure, Ap
 ## Expanded article figures
 
 SQL Server uses Devicon `icons/microsoftsqlserver/microsoftsqlserver-original.svg` (MIT, existing license copy). People, API, events, globe, file, capture, discovery, product, shield/check, clock, checklist, workflow and code-review symbols are original native SVG illustrations for this article.
-
-Yggdrasil uses an original generic tree illustration for the platform bootstrap tool; it is not an official vendor mark.
