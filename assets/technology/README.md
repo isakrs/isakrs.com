@@ -14,3 +14,7 @@ Brand names and marks identify the technologies discussed; no affiliation is imp
 ## CV experience badges
 
 Python, Flask, Docker, Elasticsearch, NumPy, Swift, TypeScript, React, Azure, Apache Spark and AWS SVGs are from https://github.com/devicons/devicon/tree/master/icons (MIT, license included as `devicon-LICENSE`). Original SVGs retained; local filenames are shortened. Word2Vec uses an original generic connected-vector illustration rather than a vendor logo. SQL uses the existing generic storage symbol.
+
+## Expanded article figures
+
+SQL Server uses Devicon `icons/microsoftsqlserver/microsoftsqlserver-original.svg` (MIT, existing license copy). People, API, events, globe, file, capture, discovery, product, shield/check, clock, checklist, workflow and code-review symbols are original native SVG illustrations for this article.
