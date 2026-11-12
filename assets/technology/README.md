@@ -10,3 +10,7 @@ Local SVG assets used as decorative companions to visible text labels.
 Brand names and marks identify the technologies discussed; no affiliation is implied.
 
 - Terraform and OpenTofu: Simple Icons, CC0-1.0; `icons/terraform.svg` and `icons/opentofu.svg`. Brand-colour fills added.
+
+## CV experience badges
+
+Python, Flask, Docker, Elasticsearch, NumPy, Swift, TypeScript, React, Azure, Apache Spark and AWS SVGs are from https://github.com/devicons/devicon/tree/master/icons (MIT, license included as `devicon-LICENSE`). Original SVGs retained; local filenames are shortened. Word2Vec uses an original generic connected-vector illustration rather than a vendor logo. SQL uses the existing generic storage symbol.

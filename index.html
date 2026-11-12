@@ -751,6 +751,30 @@
       }
       .topbar-links { display: none; }
     }
+
+    /* Technologies stay attached to the work where they were used. */
+    .role-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      list-style: none;
+      padding: 0;
+      margin: 16px 0 0;
+    }
+    .role-tech li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      border: 1px solid var(--rule);
+      border-radius: 9px;
+      background: var(--card);
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .role-tech img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
+    .role-tech-note { font-size: 11px; color: var(--muted); line-height: 1.6; margin-top: 9px; }
   </style>
 </head>
 <body>
@@ -835,6 +859,11 @@
           <ul class="tl-points">
             <li>Develop software in the Shopping Assistant team.</li>
           </ul>
+          <ul class="role-tech" aria-label="Technologies used at Shopping Assistant">
+            <li><img src="/assets/technology/swift.svg" width="20" height="20" alt="" aria-hidden="true">Swift</li>
+            <li><img src="/assets/technology/typescript.svg" width="20" height="20" alt="" aria-hidden="true">TypeScript</li>
+            <li><img src="/assets/technology/react.svg" width="20" height="20" alt="" aria-hidden="true">React</li>
+          </ul>
         </div>
       </div>
 
@@ -852,6 +881,15 @@
             <li>Built the data export service that sends golden-layer data back to product teams.</li>
             <li>Architected and implemented the SQL tables and compute for <strong>Vipps Wrapped 2025 in two weeks</strong>.</li>
             <li>Team evangelist for keeping Data Platform aligned with company goals and seen as a fun, high-trust team to work with.</li>
+          </ul>
+          <ul class="role-tech" aria-label="Technologies used at Vipps Data Platform">
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/object-storage.svg" width="20" height="20" alt="" aria-hidden="true">SQL</li>
+            <li><img src="/assets/technology/azure.svg" width="20" height="20" alt="" aria-hidden="true">Azure</li>
+            <li><img src="/assets/technology/databricks.svg" width="20" height="20" alt="" aria-hidden="true">Databricks</li>
+            <li><img src="/assets/technology/apache-spark.svg" width="20" height="20" alt="" aria-hidden="true">Apache Spark</li>
+            <li><img src="/assets/technology/terraform.svg" width="20" height="20" alt="" aria-hidden="true">Terraform</li>
+            <li><img src="/assets/technology/github-actions.svg" width="20" height="20" alt="" aria-hidden="true">GitHub Actions</li>
           </ul>
           <div class="proof-links">
             <a class="proof-link" href="/data-platform/">My guide to building a good data platform</a>
@@ -899,6 +937,14 @@
             <li><strong>Formally led a team of four consultants</strong> developing decision-support tools for Yara's urea trading, combining <strong>time-series models with cost optimization</strong>.</li>
             <li>Acted as spokesperson and architect for Yara's <strong>award-winning Schibsted recruitment campaign</strong>.</li>
           </ul>
+          <ul class="role-tech" aria-label="Technologies used at Yara">
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/aws.svg" width="20" height="20" alt="" aria-hidden="true">AWS / SageMaker</li>
+            <li><img src="/assets/technology/docker.svg" width="20" height="20" alt="" aria-hidden="true">Docker</li>
+            <li><img src="/assets/technology/react.svg" width="20" height="20" alt="" aria-hidden="true">React</li>
+            <li><img src="/assets/technology/typescript.svg" width="20" height="20" alt="" aria-hidden="true">TypeScript</li>
+          </ul>
+          <p class="role-tech-note">AWS work also included Lambda, CloudFormation and deployment pipelines.</p>
           <div class="proof-links">
             <a class="proof-link" href="https://aws.amazon.com/blogs/machine-learning/how-yara-is-using-mlops-features-of-amazon-sagemaker-to-scale-energy-optimization-across-their-ammonia-plants/" target="_blank" rel="noopener">Amazon Web Services article</a>
             <a class="proof-link" href="https://www.finn.no/bedriftskunde/aktuelt/finn-jobb/the-hunt-2023" target="_blank" rel="noopener">FINN jobb Awards</a>
@@ -922,6 +968,10 @@
             <li>Reduced picking time by <strong>14.9%</strong>, approximately <strong>13 million Norwegian kroner</strong> in recurring annual cost reduction at the time.</li>
             <li>Handed over the solution with <strong>scalable code design</strong> for further optimization work and future extensions of the simulation events.</li>
           </ul>
+          <ul class="role-tech" aria-label="Technologies used at Oda">
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/numpy.svg" width="20" height="20" alt="" aria-hidden="true">NumPy</li>
+          </ul>
           <div class="proof-links">
             <a class="proof-link" href="assets/documents/oda-warehouse-optimization-master-thesis.pdf" target="_blank" rel="noopener">Master thesis</a>
             <a class="proof-link" href="https://github.com/isakrs/MasterThesis" target="_blank" rel="noopener">Source code</a>
@@ -942,6 +992,10 @@
           <ul class="tl-points">
             <li>Built anomaly detection for industrial time series using unsupervised learning in Dockerized environments.</li>
           </ul>
+          <ul class="role-tech" aria-label="Technologies used at Cognite">
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/docker.svg" width="20" height="20" alt="" aria-hidden="true">Docker</li>
+          </ul>
         </div>
       </div>
 
@@ -956,6 +1010,13 @@
           <ul class="tl-points">
             <li>Implemented the <strong>first search engine</strong> for the <a href="https://www.folq.no" target="_blank" rel="noopener">folq.no</a> consulting marketplace using natural language processing, Word2Vec models, Elasticsearch, and optimization algorithms.</li>
             <li>Helped replace manual consultant suggestions with <strong>ranked discovery</strong> based on experience, availability, and matching quality.</li>
+          </ul>
+          <ul class="role-tech" aria-label="Technologies used at Blank / Folq">
+            <li><img src="/assets/technology/python.svg" width="20" height="20" alt="" aria-hidden="true">Python</li>
+            <li><img src="/assets/technology/flask.svg" width="20" height="20" alt="" aria-hidden="true">Flask</li>
+            <li><img src="/assets/technology/elasticsearch.svg" width="20" height="20" alt="" aria-hidden="true">Elasticsearch</li>
+            <li><img src="/assets/technology/docker.svg" width="20" height="20" alt="" aria-hidden="true">Docker</li>
+            <li><img src="/assets/technology/word2vec.svg" width="20" height="20" alt="" aria-hidden="true">Word2Vec</li>
           </ul>
         </div>
       </div>
